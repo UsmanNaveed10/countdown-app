@@ -1,0 +1,172 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #00ffcc;
+  margin: 0;
+  height: 100vh;
+}
+
+/* This container now controls the shared width for both display boxes */
+.value-display {
+  /* --- FIX: Set a consistent fixed width for both boxes --- */
+  width: 350px;
+  /* --- FIX: Use border-box to contain padding within the 350px --- */
+  box-sizing: border-box;
+  /* ----------------------------------------------------------------- */
+
+  font-size: 2rem;
+  font-weight: 900;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px; /* Padding remains consistent */
+  border-radius: 20px;
+  box-shadow: 0 0 40px #00ffcc;
+  margin: 0 auto;
+  color: #00ffcc;
+  letter-spacing: 3px;
+}
+
+/* Removed the original #timer ID block */
+
+
+.timer-wrapper {
+  text-align: center;
+  /* No longer needed with flex: 1; */
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 5rem;
+  text-shadow: 3px 3px 12px #000;
+}
+
+.inputs {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+input {
+  width: 90px;
+  font-size: 1.4rem;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  outline: none;
+  box-shadow: 0 0 10px #00ffcc;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #00ffcc;
+}
+
+button {
+  font-size: 1.3rem;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #00ffcc;
+  color: #1f1c2c;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: bold;
+  box-shadow: 0 0 12px #00ffcc;
+}
+
+button:hover {
+  background-color: #00c9a7;
+  box-shadow: 0 0 25px #00ffcc;
+}
+
+#totalSeconds {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+#percentage {
+  font-size: 2.2rem;
+  margin-top: 20px;
+  color: #ffdd00;
+  text-shadow: 0 0 15px #ffdd00;
+}
+
+.progress-container {
+  position: relative;
+  /* --- FIX: Set a consistent fixed width for the progress bar container --- */
+  width: 350px;
+  /* ----------------------------------------------------------------- */
+
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  margin: 30px auto;
+  box-shadow: 0 0 25px #00ffcc;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #00ffcc, #00c9a7);
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+  box-shadow: 0 0 25px #00ffcc;
+}
+
+.interval-marker {
+  position: absolute;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #ffdd00;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interval-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #00ffcc;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+.moving-image {
+  position: absolute;
+  top: -90px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.5s ease-in-out;
+}
+
+.big-image {
+  width: 100px;
+  height: 100px;
+}
+
+.milestone {
+  color: #ffdd00;
+  text-shadow: 0 0 30px #ffdd00;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* Place both timers side-by-side */
+.timer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+  height: calc(100vh - 40px);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Make each timer take half width */
+.timer-wrapper {
+  flex: 1;
+  max-width: 50%;
+}
