@@ -5,6 +5,9 @@ import RewardDayTimer from "./RewardDayTimer";
 function App() {
   return (
     <div className="App">
+      <header>
+       
+      </header>
       <div className="timer-row">
         <CountdownTimer />
         <RewardDayTimer />
